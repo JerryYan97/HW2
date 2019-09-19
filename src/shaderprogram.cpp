@@ -161,8 +161,6 @@ char* ShaderProgram::textFileRead(const char* fileName) {
     return text;
 }
 
-
-
 QString ShaderProgram::qTextFileRead(const char *fileName)
 {
     QString text;

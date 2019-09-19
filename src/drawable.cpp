@@ -12,7 +12,6 @@ Drawable::~Drawable()
     destroy();
 }
 
-
 void Drawable::destroy()
 {
     mp_context->glDeleteBuffers(1, &m_bufIdx);

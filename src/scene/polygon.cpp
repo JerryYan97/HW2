@@ -1,6 +1,7 @@
 #include "polygon.h"
 #include <glm/gtx/matrix_transform_2d.hpp>
 
+
 Polygon2D::Polygon2D(OpenGLContext* context)
     : Drawable(context), m_vertPos(), m_vertIdx(), m_numVertices(0)
 {}
@@ -74,3 +75,107 @@ void Polygon2D::setColor(glm::vec3 c)
     mp_context->glBindBuffer(GL_ARRAY_BUFFER, m_bufCol);
     mp_context->glBufferData(GL_ARRAY_BUFFER, m_numVertices * sizeof(glm::vec3), colors.data(), GL_STATIC_DRAW);
 }
+
+///********************************************************
+/// RectangleGeometry
+///********************************************************
+RectangleGeometry::RectangleGeometry(OpenGLContext* context)
+    : Polygon2D (
+          context,
+         {glm::vec3(0.5f, 0.5f, 1.f),
+          glm::vec3(-0.5f, 0.5f, 1.f),
+          glm::vec3(-0.5f, -0.5f, 1.f),
+          glm::vec3(0.5f, -0.5f, 1.f)})
+{}
+
+RectangleGeometry::~RectangleGeometry()
+{
+    destroy();
+}
+
+void RectangleGeometry::SetRectangle(std::array<glm::vec3, 4>& iVertices)
+{
+    vertices = iVertices;
+}
+///********************************************************
+///********************************************************
+
+
+
+///********************************************************
+/// CircleGeometry
+///********************************************************
+CircleGeometry::CircleGeometry(OpenGLContext* context)
+    : Polygon2D(context, 20)
+{}
+
+CircleGeometry::~CircleGeometry()
+{
+    destroy();
+}
+
+///********************************************************
+///********************************************************
+
+
+///********************************************************
+/// TrapezoidGeometry
+///********************************************************
+TrapezoidGeometry::TrapezoidGeometry(OpenGLContext* context)
+    : Polygon2D(
+          context,
+          {glm::vec3(0.5f, 0.5f, 1.f),
+           glm::vec3(-0.5f, 0.5f, 1.f),
+           glm::vec3(-1.f, -0.5f, 1.f),
+           glm::vec3(1.f, -0.5f, 1.f)})
+{}
+
+TrapezoidGeometry::~TrapezoidGeometry()
+{
+    destroy();
+}
+///********************************************************
+///********************************************************
+
+
+
+///********************************************************
+/// ShoeGeometry
+///********************************************************
+ShoeGeometry::ShoeGeometry(OpenGLContext* context)
+    : Polygon2D (context)
+{
+    m_vertPos = {
+        glm::vec3( 0.f, 1.f, 1.f),
+        glm::vec3(-1.f, 1.f, 1.f),
+        glm::vec3(-1.f,-1.f, 1.f),
+        glm::vec3( 0.f,-1.f, 1.f),
+        glm::vec3(-1.f, 0.f, 1.f),
+        glm::vec3( 1.f, 0.f, 1.f),
+        glm::vec3( 1.f,-1.f, 1.f)
+    };
+
+
+    m_vertIdx.push_back(0);
+    m_vertIdx.push_back(1);
+    m_vertIdx.push_back(2);
+
+    m_vertIdx.push_back(0);
+    m_vertIdx.push_back(2);
+    m_vertIdx.push_back(3);
+
+    m_vertIdx.push_back(4);
+    m_vertIdx.push_back(2);
+    m_vertIdx.push_back(6);
+
+    m_vertIdx.push_back(4);
+    m_vertIdx.push_back(6);
+    m_vertIdx.push_back(5);
+}
+
+ShoeGeometry::~ShoeGeometry()
+{
+    destroy();
+}
+///********************************************************
+///********************************************************

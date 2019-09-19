@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
+    <width>976</width>
     <height>640</height>
    </rect>
   </property>
@@ -24,13 +24,276 @@
      </rect>
     </property>
    </widget>
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>10</y>
+      <width>321</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="columnCount">
+     <number>1</number>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">The Puppet</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="setGeoSquareBtn">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>410</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SetGeoSquare</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addTranslateNodeBtn">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>500</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Translate</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addRotateNodeBtn">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>500</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rotate</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addScaleNodeBtn">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>500</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Scale</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>260</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rotation:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>300</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Translation:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>300</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>300</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>340</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Scalar:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>340</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>340</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>470</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add a new Node:</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="rotateSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>260</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-360.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>360.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="scalarXSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>340</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-99.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.250000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="scalarYSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>340</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-99.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.250000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="translateYSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>300</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-10.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>10.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.250000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="translateXSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>300</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="decimals">
+     <number>2</number>
+    </property>
+    <property name="minimum">
+     <double>-10.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>10.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.250000000000000</double>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>640</width>
+     <width>976</width>
      <height>26</height>
     </rect>
    </property>

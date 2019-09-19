@@ -1,0 +1,2 @@
+2019-09-15 11:20AM Github upload knowledge. https://blog.csdn.net/qq_36614846/article/details/70280168
+2019-09-16 2:13PM C++ dynamic_cast knowledge. https://www.cnblogs.com/weidagang2046/archive/2010/04/10/1709226.html
